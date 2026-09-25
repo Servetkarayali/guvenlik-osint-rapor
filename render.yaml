@@ -1,0 +1,13 @@
+# Render.com icin tek tikla dagitim yapilandirmasi (ucretsiz plan).
+# Kurulum: render.com'da hesap ac > New > Blueprint > bu depoyu sec.
+# Render, asagidaki ayarlarla uygulamayi otomatik yayina alir.
+services:
+  - type: web
+    name: guvenlik-osint-rapor
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
