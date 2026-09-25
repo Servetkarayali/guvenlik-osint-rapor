@@ -48,7 +48,7 @@ button.birincil { background: var(--vurgu); border-color: var(--vurgu); color: #
 .durum { margin-left: 10px; font-size: .88rem; }
 .durum.ok { color: var(--iyi); }
 .durum.hata { color: var(--kritik); }
-.gizli { display: none; }
+.gizli { display: none !important; }
 .yukleniyor { display: flex; align-items: center; gap: 12px; color: var(--soluk); padding: 20px; }
 .spinner { width: 22px; height: 22px; border: 3px solid var(--cerceve); border-top-color: var(--vurgu); border-radius: 50%; animation: don 0.8s linear infinite; }
 @keyframes don { to { transform: rotate(360deg); } }
