@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Güvenlik & OSINT Rapor</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <header class="ust">
+    <div class="kap">
+      <h1>🛡️ Güvenlik &amp; OSINT Rapor</h1>
+      <p class="alt">Bir web sitesi adresi girin; yasal sınırlar içinde kapsamlı bir güvenlik ve OSINT raporu alın.</p>
+    </div>
+  </header>
+
+  <main class="kap">
+    <section class="kart">
+      <label for="url">Hedef URL veya alan adı</label>
+      <div class="satir">
+        <input id="url" type="text" placeholder="ornek.com veya https://ornek.com" autocomplete="off" />
+        <button id="pasifBtn" class="birincil">Pasif Tara + OSINT</button>
+      </div>
+      <p class="ipucu">Pasif tarama yalnızca herkese açık bilgileri toplar ve her URL için çalışır. Zararsızdır.</p>
+    </section>
+
+    <section class="kart uyari-kart">
+      <details>
+        <summary>⚙️ Aktif tarama (izin gerektirir)</summary>
+        <p class="ipucu">
+          Aktif tarama yalnızca <strong>size ait olduğunu kanıtladığınız</strong> alan adları için yapılabilir.
+          İzinsiz aktif tarama yasal sorumluluk doğurabilir. Bu araç, sahiplik doğrulanmadan aktif tarama yapmaz.
+        </p>
+        <ol class="adimlar">
+          <li>
+            <button id="tokenBtn">1. Doğrulama kodu al</button>
+            <div id="tokenKutu" class="gizli token-kutu"></div>
+          </li>
+          <li>
+            <button id="dogrulaBtn" disabled>2. Sahipliği doğrula</button>
+            <span id="dogrulaDurum" class="durum"></span>
+          </li>
+          <li>
+            <label class="onay">
+              <input type="checkbox" id="onayKutu" disabled />
+              Bu alan adının sahibiyim ve aktif taramaya açık onay veriyorum.
+            </label>
+          </li>
+          <li>
+            <button id="aktifBtn" class="birincil" disabled>3. Aktif Tara</button>
+          </li>
+        </ol>
+      </details>
+    </section>
+
+    <section id="yukleniyor" class="gizli yukleniyor">
+      <div class="spinner"></div><span id="yukMetin">Taranıyor…</span>
+    </section>
+
+    <section id="rapor" class="gizli"></section>
+  </main>
+
+  <footer class="kap dip">
+    <p>Bu araç yalnızca yetkili güvenlik değerlendirmesi ve eğitim amaçlıdır. Sorumlu ve yasal kullanım kullanıcıya aittir.</p>
+  </footer>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

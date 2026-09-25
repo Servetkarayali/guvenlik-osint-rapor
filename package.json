@@ -1,0 +1,16 @@
+{
+  "name": "guvenlik-osint-rapor",
+  "version": "0.1.0",
+  "description": "Bir URL girildiginde yasal sinirlar icinde kapsamli guvenlik taramasi ve OSINT raporu ureten web uygulamasi.",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "license": "MIT"
+}
